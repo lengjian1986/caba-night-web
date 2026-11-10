@@ -48,6 +48,17 @@ button.design-node {
 .live-catalog [data-name="参考料金值"],.live-catalog [data-name="アクセス值"],.live-catalog [data-name="所属店名"]{max-width:calc(100% - var(--node-left) - 20px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .live-catalog .catalog-empty{top:440px}
 @media(max-width:1000px){.catalog-status{position:relative;left:auto;top:auto;width:100%;padding:60px 20px}.live-catalog .catalog-empty{top:auto}.live-catalog .top-node[data-name="方案标题"]{font-size:28px!important;white-space:normal}.live-catalog .design-card>.design-text{white-space:nowrap!important}.live-catalog [data-name="资料展示"]{white-space:pre-wrap!important}}
+/* Home cards stack on mobile, so desktop text offsets cannot bound their width. */
+@media(max-width:1000px){
+ .page-home [data-name^="首页 Cast"]{height:auto!important;min-height:0;align-self:stretch}
+ .page-home [data-name^="首页 Cast"]>.design-node{flex-shrink:0}
+ .page-home [data-name^="首页 Cast"]>.design-image{height:auto!important;aspect-ratio:3/4}
+ .page-home [data-name^="首页 Cast"]>.design-image img{object-position:50% 20%}
+ .page-home .design-card[data-name^="首页 Cast"]>.design-text{width:100%;max-width:100%;white-space:normal!important;line-height:1.6!important}
+ .page-home [data-name^="首页 Cast"]>[data-name="展示名"]{font-size:17px!important}
+ .page-home .design-card[data-name^="首页 Cast"]>[data-name="店铺"]{white-space:pre-wrap!important}
+ .page-home [data-name^="首页 Cast"]>[data-name="社媒入口"]{margin-top:auto;font-size:11px!important}
+}
 .live-catalog.page-area .catalog-empty{top:671px}
 .live-catalog.page-plans .top-node[data-name^="切换 "]{max-width:132px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 @media(max-width:1000px){.live-catalog.page-area .catalog-empty{top:auto}}
